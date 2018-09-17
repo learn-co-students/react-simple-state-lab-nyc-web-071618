@@ -11,17 +11,10 @@ class Cell extends Component {
   // ...define initial state with a key of 'color' set to the 'value' prop
 }
 
-
-  color = () => {
-    this.setState({
-      color: '#333'
-    })
-  }
-
 render(){
-
+  console.log(this.state)
   return (
-    <div className="cell" style={{backgroundColor: this.state.color}} onClick={this.color}> </div>
+    <div className="cell" style={{backgroundColor: this.state.color}} onClick={event => this.setState({ color: '#333'})}> </div>
   )
 }
 
